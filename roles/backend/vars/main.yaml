@@ -2,3 +2,4 @@ login_user : root
 login_password : ExpenseApp@1
 login_host :   db.devopsaws78s.online
 DB_HOST : db.devopsaws78s.online
+app_location : /app
