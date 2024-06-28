@@ -1,23 +1,23 @@
 - name: install nginx server
   ansible.builtin.dnf:
-     name: nginx
-     state: installed
+    name: nginx
+    state: installed
   
 - name: start and enable nginx
   ansible.builtin.service:
-     name: nginx
-     state: started
-     enabled: yes
+    name: nginx
+    state: started
+    enabled: yes
 
 - name: delete default website
   ansible.builtin.file:
-     path: /usr/share/nginx/html
-     state: absent
+    path: /usr/share/nginx/html
+    state: absent
 
 - name: create html directory
   ansible.builtin.file:
-     path: /usr/share/nginx/html
-     state: directory
+    path: /usr/share/nginx/html
+    state: directory
 
 - name: download and extract frontend code
   ansible.builtin.unarchive:
