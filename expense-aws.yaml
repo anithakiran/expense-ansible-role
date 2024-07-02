@@ -10,7 +10,7 @@
   - name : create ec2 instances
     amazon.aws.ec2_instance : 
       instance_type : t2.micro
-      name : "{{citem }}"
+      name : "{{ item }}"
       security_group : allow-everything
       image_id : 
       tags :
